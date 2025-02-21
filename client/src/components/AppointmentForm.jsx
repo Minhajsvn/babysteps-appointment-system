@@ -15,7 +15,7 @@ const handleSubmit = async (e) => {
     try {
         const dateString = new Date(slot).toISOString().split('T')[0];
         const response = await axios.get(
-        `http://localhost:5000/doctors/${doctorId}/slots?date=${dateString}`
+        `https://babysteps-appointment-system.onrender.com/doctors/${doctorId}/slots?date=${dateString}`
         );
         const isSlotAvailable = response.data.includes(slot);
 
@@ -25,7 +25,7 @@ const handleSubmit = async (e) => {
         }
 
         // Proceed to book the appointment
-        await axios.post('http://localhost:5000/appointments', {
+        await axios.post('https://babysteps-appointment-system.onrender.com/appointments', {
         doctorId,
         date: slot,
         duration: 30,

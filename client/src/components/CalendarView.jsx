@@ -15,7 +15,7 @@ const CalendarView = () => {
         try {
             const dateString = selectedDate.toISOString().split('T')[0]; // UTC date
             const response = await axios.get(
-                `http://localhost:5000/doctors/${doctorId}/slots?date=${dateString}`
+                `https://babysteps-appointment-system.onrender.com/doctors/${doctorId}/slots?date=${dateString}`
             );
             setSlots(response.data);
         } catch (error) {

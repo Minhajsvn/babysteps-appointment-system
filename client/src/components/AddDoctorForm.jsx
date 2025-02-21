@@ -16,7 +16,7 @@ const AddDoctorForm = () => {
         };
 
         try {
-            await axios.post('http://localhost:8082/doctors', newDoctor);
+            await axios.post('https://babysteps-appointment-system.onrender.com/doctors', newDoctor);
             alert('Doctor added successfully!');
             navigate('/'); 
         } catch (error) {

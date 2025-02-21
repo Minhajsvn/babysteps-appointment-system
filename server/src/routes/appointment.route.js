@@ -14,11 +14,10 @@ router.get('/', appointmentController.getAppointment);
 router.get('/:id', appointmentController.getAppointmentById);
 
 // Update appointments
-router.put(':id', appointmentController.updateAppointment);
+router.put('/:id', appointmentController.updateAppointment);
 
 // delete appointments
-router.delete(':id', appointmentController.deleteAppointment);
+router.delete('/:id', appointmentController.deleteAppointment);
 
-// Other endpoints (GET /:id, PUT /:id, DELETE /:id) can be added similarly.
 
 module.exports = router;
