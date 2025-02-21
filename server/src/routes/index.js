@@ -4,7 +4,7 @@ const doctorRoute = require('./doctor.route');
 
 const router = express.Router();
 
-router.use("/appointment", appointmentRoute);
+router.use("/appointments", appointmentRoute);
 router.use('/doctors', doctorRoute);
 
 

@@ -8,7 +8,7 @@ const DoctorList = () => {
 
 useEffect(() => {
 // Fetch doctors from the backend
-axios.get('http://localhost:8082/doctors')
+axios.get('https://babysteps-appointment-system.onrender.com/doctors')
     .then(response => setDoctors(response.data))
     .catch(error => console.error(error));
 }, []);

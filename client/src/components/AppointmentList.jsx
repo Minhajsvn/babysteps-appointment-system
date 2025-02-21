@@ -6,7 +6,7 @@ const AppointmentList = () => {
 
     useEffect(() => {
         // Fetch all appointments
-        axios.get('http://localhost:5000/appointments')
+        axios.get('https://babysteps-appointment-system.onrender.com/appointments')
         .then(response => setAppointments(response.data))
         .catch(error => console.error(error));
     }, []);

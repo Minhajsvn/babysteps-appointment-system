@@ -36,6 +36,7 @@ const getAppointmentByDoctor = async (req, res) => {
 // Create an Appointment
 const createAppointment = async (req, res) => {
     try {
+        console.log('controller');
         const newAppointment = await appointmentService.createAppointment(req.body);
         res.status(201).json(newAppointment);
     } catch (err) {
